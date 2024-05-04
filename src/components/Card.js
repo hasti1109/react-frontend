@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import React from 'react'
 import '../styles/Card.css'
 
@@ -8,20 +7,6 @@ const Card = ({ data, handleOpenModal }) => {
   const date = new Date(timestamp * 1000);
   const options = { month: 'short', day: '2-digit', year: 'numeric' };
   const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
-
-  // const [showModal, setShowModal] = useState(false)
-  // const [modalIndex, setModalIndex] = useState(null);
-
-  // const openModal = (index) => {
-  //   setShowModal(true);
-  //   setModalIndex(index);
-  //   document.body.style.overflow = 'hidden';
-  // };
-
-  // const closeModal = () => {
-  //   setShowModal(false);
-  //   document.body.style.overflow = 'auto';
-  // };
 
   return (
     <>
@@ -37,7 +22,7 @@ const Card = ({ data, handleOpenModal }) => {
         <div class="orange-circle"></div>
       </div>
       <div className="card-content">
-        <h2 className="card-title">{data.title}</h2>
+        <h2 className="card-title" onClick={() => handleOpenModal()}>{data.title}</h2>
         <p className="card-description">{data.content}</p>
         <div className="card-footer">
           <span className="author">{data.author.name} - {data.author.role}</span>
