@@ -90,6 +90,7 @@ $desktop: 1024px;
     cursor: pointer;
     font-weight: 900;
     margin-bottom: 6px;
+    margin-top: 0px;
     @media (min-width: $mobile) {
       font-size: 1rem;
     }
@@ -145,4 +146,26 @@ $desktop: 1024px;
   100% {
       transform: translateY(0px);
   }
+}
+
+.circle-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 10px 0px 0px 20px;
+}
+@mixin circle($color, $margin-r){
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color;
+  margin-right: $margin-r
+}
+
+.blue-circle {
+  @include circle(rgb(39, 115, 236), 10px);
+}
+
+.orange-circle {
+  @include circle(rgb(248, 188, 76), 10px);
 }

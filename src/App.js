@@ -1,9 +1,12 @@
 import React, {useEffect,useState} from 'react';
 import './styles/App.css'
 import Card from './components/Card';
+import Modal from './components/Modal';
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [selectedData, setSelectedData] = useState(null);
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,15 +18,30 @@ const App = () => {
         console.log(error);
       }
     };
-
     fetchData();
   }, []);
 
+  const handleOpenModal = (data) => {
+    setSelectedData(data);
+    setShowModal(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    document.body.style.overflow = 'auto';
+  };
+
   return (
-    <div className="App">
-      {data.map((item, index) => (
-        <Card key={index} data={item} />
-      ))}
+    <div>
+      <div className="App">
+        {data.map((item, index) => (
+          <Card key={index} data={item} handleOpenModal={() => handleOpenModal(item)}/>
+        ))}
+      </div>
+      {showModal && (
+        <Modal data={selectedData} onClose={handleCloseModal} />
+      )}
     </div>
   );
 };

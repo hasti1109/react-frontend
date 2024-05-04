@@ -22,8 +22,8 @@ const Modal = ({data, onClose}) => {
             <h2 className="modal-card-title">{data.title}</h2>
             <p className="modal-card-description">{data.content}</p>
             <div className="modal-card-footer">
+              <span className='modal-avatar'><img src={data.author.avatar}/></span>
               <span className="modal-author">{data.author.name} - {data.author.role}</span>
-              <span className="modal-date"></span>
             </div>
           </div>
         </div>

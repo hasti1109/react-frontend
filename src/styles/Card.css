@@ -73,6 +73,7 @@
   cursor: pointer;
   font-weight: 900;
   margin-bottom: 6px;
+  margin-top: 0px;
 }
 @media (min-width: 320px) {
   .card .card-title {
@@ -138,4 +139,26 @@
   100% {
     transform: translateY(0px);
   }
+}
+.circle-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 10px 0px 0px 20px;
+}
+
+.blue-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(39, 115, 236);
+  margin-right: 10px;
+}
+
+.orange-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(248, 188, 76);
+  margin-right: 10px;
 }/*# sourceMappingURL=Card.css.map */
