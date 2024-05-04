@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.modal-container {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-card {
+  background-color: rgb(255, 255, 255);
+  width: 430px;
+  height: 530px;
+  max-width: 90%;
+  border: 0.5px solid #000000;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato";
+}
+.modal-card .modal-card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  margin: 0px 10px;
+}
+.modal-card .modal-card-title {
+  cursor: pointer;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+@media (min-width: 320px) {
+  .modal-card .modal-card-title {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .modal-card .modal-card-title {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .modal-card .modal-card-title {
+    font-size: 1.3rem;
+  }
+}
+.modal-card .modal-card-description {
+  font-size: 0.7rem;
+  color: #7e7a7a;
+  margin-bottom: 12px;
+}
+@media (min-width: 320px) {
+  .modal-card .modal-card-description {
+    font-size: 0.6rem;
+  }
+}
+@media (min-width: 768px) {
+  .modal-card .modal-card-description {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .modal-card .modal-card-description {
+    font-size: 0.7rem;
+  }
+}
+.modal-card .modal-card-footer {
+  width: 100%;
+  display: flex;
+  color: #969696;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+@media (min-width: 320px) {
+  .modal-card .modal-card-footer {
+    font-size: 0.5rem;
+  }
+}
+.modal-card .modal-author,
+.modal-card .modal-date {
+  color: #999;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.quit-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.8em;
+}
+.quit-button .cross {
+  cursor: pointer;
+}/*# sourceMappingURL=Modal.css.map */

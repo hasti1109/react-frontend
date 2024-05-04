@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$font-family: 'Lato';
+$title-font-size: 1.3rem;
+$desc-font-size: 0.7rem;
+$mobile: 320px; 
+$tablet: 768px;
+$desktop: 1024px;
+
+.modal-container{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-card{
+  background-color: rgb(255, 255, 255);
+  width: 430px;
+  height: 530px;
+  max-width: 90%;
+  border: 0.5px solid #000000;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family;
+
+  .modal-card-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    margin:0px 10px;
+  }
+
+  .modal-card-title {
+    cursor: pointer;
+    font-weight: 900;
+    margin-bottom: 6px;
+    @media (min-width: $mobile) {
+      font-size: 1rem;
+    }
+    @media (min-width: $tablet) {
+      font-size: $title-font-size;
+    }
+    @media (min-width: $desktop) {
+      font-size: $title-font-size;
+    }
+  }
+
+  .modal-card-description {
+    font-size: $desc-font-size;
+    color: #7e7a7a;
+    margin-bottom: 12px;
+    @media (min-width: $mobile) {
+      font-size: 0.6rem;
+    }
+    @media (min-width: $tablet) {
+      font-size: $desc-font-size;
+    }
+    @media (min-width: $desktop) {
+      font-size: $desc-font-size;
+    }
+  }
+
+  .modal-card-footer {
+    width: 100%;
+    display: flex;
+    color: #969696;
+    justify-content: space-between;
+    font-size: 0.8em;
+    @media (min-width: $mobile) {
+      font-size: 0.5rem;
+    }
+  }
+
+  .modal-author,
+  .modal-date {
+    color: #999;
+  }
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.quit-button{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.8em;
+
+  .cross{
+    cursor: pointer;
+  }
+}
